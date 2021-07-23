@@ -1,19 +1,21 @@
-import './login.css';
+import './register.css';
 
-const Login = () => {
+const Register = () => {
   return (
-    <div className='login'>
-      <span className="loginTitle">Login</span>
-      <form className="loginForm">
+    <div className='register'>
+      <span className="registerTitle">Register</span>
+      <form className="registerForm">
+        <label>Username</label>
+        <input type="text" placeholder='Enter your username' className='registerInput' />
         <label>Email</label>
-        <input type="email" placeholder='Email your email' className='loginInput' />
+        <input type="email" placeholder='Enter your email' className='registerInput' />
         <label>Password</label>
-        <input type="password" placeholder='Enter your password' className='loginInput' />
-        <button className="loginButton">Login</button>
+        <input type="password" placeholder='Enter your password' className='registerInput' />
+        <button className="registerButton">Register</button>
       </form>
-      <button className="loginRegisterButton">Register</button>
+      <button className="registerLoginButton">Login</button>
     </div>
   )
 }
 
-export default Login;
+export default Register;

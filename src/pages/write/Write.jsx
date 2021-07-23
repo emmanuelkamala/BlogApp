@@ -1,6 +1,7 @@
 import './write.css';
 
 const Write = () => {
+  
   return (
     <div className='write'>
       <img src="/images/beach-banner.jpg" alt="cover" className="writeImg" />

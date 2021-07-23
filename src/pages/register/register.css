@@ -1,20 +1,20 @@
-.login {
+.register {
   height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(rgba(160, 160, 160, 0.8), rgba(161, 161, 161, 0.8)
-  ), url('../images/meal.png');
+  ), url('../images/register.jpg');
   background-size: cover;
 }
 
-.loginTitle {
+.registerTitle {
   font-size: 50px;
   color: white;
 }
 
-.loginForm {
+.registerForm {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -22,20 +22,20 @@
 
 }
 
-.loginForm > label {
+.registerForm > label {
   margin: 10px 0;
   color: white;
 }
 
-.loginInput {
+.registerInput {
   padding: 10px;
   background-color: white;
   border: none;
 }
 
-.loginButton {
+.registerButton {
   margin-top: 20px;
-  background-color: lightcoral;
+  background-color: teal;
   border: none;
   color: white;
   border-radius: 5px;
@@ -44,11 +44,11 @@
   font-size: 16px;
 }
 
-.loginRegisterButton {
+.registerLoginButton {
   position: absolute;
   top: 60px;
   right: 20px;
-  background-color: teal;
+  background-color: lightcoral;
   cursor: pointer;
   border: none;
   color: white;

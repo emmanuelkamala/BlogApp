@@ -6,7 +6,7 @@ const Login = () => {
       <span className="loginTitle">Login</span>
       <form className="loginForm">
         <label>Email</label>
-        <input type="email" placeholder='Email your email' className='loginInput' />
+        <input type="email" placeholder='Enter your email' className='loginInput' />
         <label>Password</label>
         <input type="password" placeholder='Enter your password' className='loginInput' />
         <button className="loginButton">Login</button>
