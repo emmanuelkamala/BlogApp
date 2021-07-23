@@ -3,12 +3,13 @@ import Topbar from "./components/topbar/Topbar";
 import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
 import Settings from "./pages/settings/Settings";
+import Login from "./pages/login/Login";
 
 function App() {
   return (
     <div>
       <Topbar />
-      <Settings />
+      <Login />
     </div>
   );
 }
