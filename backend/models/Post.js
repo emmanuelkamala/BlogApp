@@ -7,7 +7,8 @@ const PostSchema = new mongoose.Schema({
   username: { type: String, required: true },
   categories: { type: Array }
 }, 
-  {timeStamps: true}
+  {timestamps: true}
 )
 
-module.exports = mongoose.model('Post', PostSchema);
+const Post = mongoose.model('Post', PostSchema);
+export default Post;

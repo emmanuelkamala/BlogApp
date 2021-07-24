@@ -6,7 +6,9 @@ const UserSchema = new mongoose.Schema({
   password: { type: String, required: true },
   profilePic: { type: String, default: ''}
 }, 
-  {timeStamps: true}
+  {timestamps: true}
 )
 
-module.exports = mongoose.model('User', UserSchema);
+const User = mongoose.model('User', UserSchema);
+
+export default User;
