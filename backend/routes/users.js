@@ -27,6 +27,8 @@ userRouter.put('/:id', async (req, res) => {
  }
 )
 
+// DELETE 
+
 userRouter.delete('/:id', async (req, res) => {
   if (req.body.userId === req.params.id) { 
     try {
@@ -47,6 +49,18 @@ userRouter.delete('/:id', async (req, res) => {
   }
  }
 )
+
+// GET USER
+
+userRouter.get('/:id', async (req, res) => {
+  try {
+    const user = await User.findById(req.params.id);
+    const { password, ...others } = user._doc;
+    res.send(200).json(others);
+  } catch (error) {
+    res.send(500).json(error);
+  }
+})
 
 
 export default userRouter;
