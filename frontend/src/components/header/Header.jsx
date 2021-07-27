@@ -7,7 +7,7 @@ const Header = () => {
         <span className="headerTitleSm">My</span>
         <span className="headerTitleLg">Blog</span>
       </div>
-      <img src="/images/beach-banner.jpg" alt="header background" className="headerImg" />
+      <img src="/images/beach.jpg" alt="header background" className="headerImg" />
     </div>
   )
 }

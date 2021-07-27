@@ -1,18 +1,30 @@
+import { Link } from 'react-router-dom';
 import './post.css';
 
-const Post = () => {
+const Post = ({post}) => {
   return (
     <div className='post'>
-      <img src="/images/keto.png" alt="post" className="postImg" />
+      {
+        post.photo && (
+          <img src={post.photo} alt="post" className="postImg" />
+        )
+      }
+      
       <div className="postInfo">
         <div className="postCats">
-          <span className="postCat">Keto diet</span>
-          <span className="postCat">Keto lifestyle</span>
+          {
+            post.categories.map(c => (
+              <span className="postCat">{c.name}</span>
+            ))
+          }
         </div>
-        <span className="postTitle">Lorem ipsum dolor</span>
+        <Link to={`/post/${post._id}`} className='link'>
+          <span className="postTitle">{post.title}</span>
+        </Link>
+        
         <hr />
-        <span className="postDate">1 hour ago</span>
-        <p className='postDescription'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime corporis distinctio vitae neque harum illo saepe quo molestias reiciendis sit</p>
+        <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
+        <p className='postDescription'>{post.desc}</p>
       </div>
     </div>
   )
