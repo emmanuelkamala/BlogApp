@@ -23,7 +23,7 @@ const Sidebar = () => {
       <div className="sidebarItem">
         <span className="sidebarTitle">Categories</span>
         <ul className="sidebarList">
-          { cats.map( cat => ( <li className="sidebarListItem">{cat.name}</li>)) }
+          { cats.map( cat => ( <li key={Math.floor()*10} className="sidebarListItem">{cat.name}</li>)) }
         </ul>
       </div>
       <div className="sidebarItem">
