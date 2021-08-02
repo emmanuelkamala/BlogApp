@@ -30,7 +30,7 @@ const Topbar = () => {
       </div>
       <div className="topRight">
         {
-          user ? (<img src={user.profilePic} alt="profile pic" className="topImg" />) : (
+          user ? (<img src={user.profilePic} alt="pic" className="topImg" />) : (
             <ul className='topList'>
               <li className='topListItem'><Link to='/login' className='link'>Login</Link></li>
               <li className='topListItem'><Link to='/register' className='link'>Register</Link></li>

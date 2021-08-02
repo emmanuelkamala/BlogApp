@@ -6,10 +6,14 @@ import authRouter from './routes/auth.js';
 import userRouter from './routes/users.js';
 import postRouter from './routes/posts.js';
 import categoryRouter from './routes/categories.js';
+import path from 'path';
+
+const __dirname = path.resolve();
 
 const app = express();
 dotenv.config()
 app.use(express.json());
+app.use('/images', express.static(path.join(__dirname, '/images')));
 
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
 .then(console.log('Connected to MongoDB'))
