@@ -4,7 +4,7 @@ const Write = () => {
   
   return (
     <div className='write'>
-      <img src="/images/beach-banner.jpg" alt="cover" className="writeImg" />
+      <img src="/images/beach.jpg" alt="cover" className="writeImg" />
       <form className="writeForm">
         <div className="writeFormGroup">
           <label htmlFor='fileInput'>
