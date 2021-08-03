@@ -5,17 +5,18 @@ import { Context } from '../../context/Context';
 import './settings.css';
 
 const Settings = () => {
+  const PF = 'http://localhost:5000/images/';
   const [file, setFile] = useState(null);
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [success, setSuccess] = useState(false);
 
-  const {user} = useContext(Context);
+  const {user, dispatch} = useContext(Context);
   
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    dispatch({type: 'UPDATE START'});
     const updatedUser = {
       userId: user._id,
       username, 
@@ -35,10 +36,11 @@ const Settings = () => {
       }
     }
     try {
-      await axios.put('/users/' + user._id, updatedUser);
+      const res = await axios.put('/users/' + user._id, updatedUser);
       setSuccess(true);
+      dispatch({type: 'UPDATE SUCCESS', payload: res.data })
     } catch (error) {
-      console.log(error.response.data);
+      dispatch({ type: 'UPDATE FAILURE'})
     }
   }
 
@@ -53,7 +55,7 @@ const Settings = () => {
           <label>Profile Picture</label>
           <div className="settingsPP">
             <img 
-              src={file ? URL.createObjectURL(file) : user.profilePic} 
+              src={file ? URL.createObjectURL(file) : PF + user.profilePic} 
               alt="profile" 
               className="settingsImg"  
             />
